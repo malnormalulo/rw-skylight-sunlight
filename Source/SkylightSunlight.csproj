@@ -37,13 +37,15 @@
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
         <Reference Include="System.Xml" />
+        <Reference Include="System.Reflection" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.3704" />
-        <!--         <Reference Include="Assembly-CSharp">
-            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+        <PackageReference Include="Lib.Harmony" Version="2.2.2" />
+        <Reference Include="DubsSkylights">
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\833899765\1.4\Assemblies\Dubs Skylight.dll</HintPath>
             <Private>False</Private>
-        </Reference> -->
+        </Reference>
     </ItemGroup>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.

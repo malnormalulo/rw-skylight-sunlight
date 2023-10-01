@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ModMetaData>
-    <name>skylight_sunlight</name>
-    <author>"Your Name Here"</author>
-    <packageId>yourName.ModName</packageId>
-    <description>"Super Cool Mod"</description>
+    <name>Skylight Sunlight</name>
+    <author>Malnormalulo</author>
+    <packageId>com.malnormalulo.SkylightSunlight</packageId>
+    <description>Simple compatibility patch to make Dubs Skylights work as expected with Sanguophages and VE's Phytokin.</description>
     <supportedVersions>
         <li>1.4</li>
     </supportedVersions>
+    <modDependencies>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+        </li>
+        <li>
+            <packageId>Dubwise.DubsSkylights</packageId>
+            <displayName>Dubs Skylights</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/833899765</steamWorkshopUrl>
+        </li>
+    </modDependencies>
 </ModMetaData>
-<!--
-When adding a preview photo
-
-Must be called Preview.png
-
-Should be
-640x360
-
-Must Not Be Larger then 1MB in size
- -->

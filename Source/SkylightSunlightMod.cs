@@ -1,4 +1,6 @@
-﻿using Verse;
+﻿using System.Reflection;
+using Verse;
+using HarmonyLib;
 
 namespace com.malnormalulo.SkylightSunlight
 {
@@ -7,7 +9,9 @@ namespace com.malnormalulo.SkylightSunlight
     {
         static SkylightSunlightMod()
         {
-            Log.Message("Hello, World!");
+            var harmony = new Harmony("com.malnormalulo.SkylightSunlight");
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
+            Log.Message("[Skylight Sunlight] Loaded");
         }
     }
 }
