@@ -14,16 +14,17 @@ namespace com.malnormalulo.SkylightSunlight
 	{
 		public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
 		{
-			// MethodInfo roofedMethod = AccessTools.Method(typeof(RoofGrid), nameof(RoofGrid.Roofed));
 			foreach (var instruction in instructions)
 			{
-				Log.Message(instruction.ToString());
 				if (instruction.opcode == OpCodes.Callvirt
 					&& ((MethodInfo)instruction.operand).DeclaringType == typeof(RoofGrid)
 					&& ((MethodInfo)instruction.operand).Name == "Roofed")
 				{
-					Log.Message("Found Roofed method call");
-					var method = AccessTools.Method(typeof(Patch_SanguophageUtility_InSunlight), nameof(Patch_SanguophageUtility_InSunlight.RoofedWithoutSkylight));
+					var method = AccessTools.Method(
+						typeof(Patch_SanguophageUtility_InSunlight),
+						nameof(Patch_SanguophageUtility_InSunlight.RoofedWithoutSkylight)
+					);
+					yield return new CodeInstruction(OpCodes.Ldarg_1);
 					yield return new CodeInstruction(OpCodes.Callvirt, method);
 				}
 				else
@@ -33,10 +34,11 @@ namespace com.malnormalulo.SkylightSunlight
 			}
 		}
 
-		public static bool RoofedWithoutSkylight(this RoofGrid rg, IntVec3 cell)
+		public static bool RoofedWithoutSkylight(this RoofGrid rg, IntVec3 cell, Map map)
 		{
-			Log.Message("Currently a passthrough");
-			return rg.Roofed(cell);
+			var skylightComp = MapComp_Skylights.LightComps[map.uniqueID];
+			var isSkylight = skylightComp.SkylightGrid[map.cellIndices.CellToIndex(cell)];
+			return rg.Roofed(cell) && !isSkylight;
 		}
 	}
 }
