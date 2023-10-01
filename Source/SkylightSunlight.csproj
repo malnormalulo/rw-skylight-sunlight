@@ -18,7 +18,6 @@
         <DebugSymbols>true</DebugSymbols>
         <DebugType>full</DebugType>
         <Optimize>false</Optimize>
-        <!-- <OutputPath>bin\Debug\</OutputPath> -->
         <DefineConstants>DEBUG;TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
@@ -27,7 +26,6 @@
         <PlatformTarget>AnyCPU</PlatformTarget>
         <DebugType>pdbonly</DebugType>
         <Optimize>true</Optimize>
-        <!-- <OutputPath>bin\Release\</OutputPath> -->
         <DefineConstants>TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
@@ -41,30 +39,10 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.3704" />
-        <PackageReference Include="Lib.Harmony" Version="2.2.2" />
+        <PackageReference Include="Lib.Harmony" Version="2.2.2" ExcludeAssets="runtime" />
         <Reference Include="DubsSkylights">
             <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\833899765\1.4\Assemblies\Dubs Skylight.dll</HintPath>
             <Private>False</Private>
         </Reference>
     </ItemGroup>
-    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-         Other similar extension points exist, see Microsoft.Common.targets.
-    <Target Name="BeforeBuild">
-    </Target>
-    <Target Name="AfterBuild">
-    </Target>
-    -->
-    <!--
-    <ItemDefinitionGroup>
-        <Reference>
-            <Private>False</Private>
-        </Reference>
-        <ProjectReference>
-            <Private>False</Private>
-        </ProjectReference>
-        <PackageReference>
-            <ExcludeAssets>runtime</ExcludeAssets>
-        </PackageReference>
-    </ItemDefinitionGroup>
-    -->
 </Project>
