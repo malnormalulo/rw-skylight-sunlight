@@ -3,7 +3,10 @@
     <name>Skylight Sunlight</name>
     <author>Malnormalulo</author>
     <packageId>com.malnormalulo.SkylightSunlight</packageId>
-    <description>Simple compatibility patch to make Dubs Skylights work as expected with Sanguophages and VE's Phytokin.</description>
+    <modVersion>1.0.0</modVersion>
+    <description><![CDATA[Simple compatibility patch to make Dubs Skylights work as expected with Sanguophages and VE's Phytokin.
+
+Code available at: https://github.com/malnormalulo/rw-skylight-sunlight]]></description>
     <supportedVersions>
         <li>1.4</li>
     </supportedVersions>
