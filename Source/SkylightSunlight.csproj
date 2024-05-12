@@ -38,10 +38,10 @@
         <Reference Include="System.Reflection" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.3704" />
-        <PackageReference Include="Lib.Harmony" Version="2.2.2" ExcludeAssets="runtime" />
+        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.4085" />
+        <PackageReference Include="Lib.Harmony" Version="2.3.3" ExcludeAssets="runtime" />
         <Reference Include="DubsSkylights">
-            <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\833899765\1.4\Assemblies\Dubs Skylight.dll</HintPath>
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\833899765\1.5\Assemblies\Dubs Skylight.dll</HintPath>
             <Private>False</Private>
         </Reference>
     </ItemGroup>
